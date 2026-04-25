@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-void text-[#e8eaed] font-sans overflow-x-hidden;
+  }
+}
+
+.neon-border {
+  @apply border border-acid/20 hover:border-acid/40 transition-all;
+  box-shadow: 0 0 10px rgba(200, 255, 0, 0.05);
+}
+
+.neon-text {
+  @apply text-acid;
+  text-shadow: 0 0 8px rgba(200, 255, 0, 0.3);
+}
+
+.panel-bg {
+  @apply bg-panel border border-white/5 relative overflow-hidden;
+}
+
+.panel-bg::before {
+  content: '';
+  @apply absolute top-0 left-0 right-0 h-[1px];
+  background: linear-gradient(90deg, transparent, rgba(200, 255, 0, 0.3), transparent);
+}
